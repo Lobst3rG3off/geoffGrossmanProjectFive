@@ -26,12 +26,14 @@ class App extends Component {
   componentDidMount() {
     // perform ajax request after component has finished rendering
     axios({
-      url: 'https://api.imgflip.com/get_memes',
+      url: 'api.giphy.com/v1/gifs/trending',
       method: 'GET',
       dataResponse: 'JSON',
       params: {
         // maybe apikey if needed
-        format: 'JSON',
+        q: 'meme',
+        api_key: 'XI2UVtaoFcAmwfGg9S1bcArrtsCLVxPc',
+        fmt: 'JSON',
       }
     }).then((response) => {
       //store the date pulled from the ajax call into the empty array, and only parsing to the stuff We want

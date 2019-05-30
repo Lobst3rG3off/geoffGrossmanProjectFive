@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.App h1 {
+  font-size: 4rem;
+}
+
+.App h2 {
+  font-size: 3rem;
+}
+
+.App img {
+  width: 100%;
+}
+
+.button {
+  width: 25%;
+  line-height: 5%;
+  padding: 5%;
+}
+
+

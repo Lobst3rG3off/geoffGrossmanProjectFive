@@ -47,9 +47,8 @@ class App extends Component {
         outputData: outputData,
         outputDataLength: outputData.length,
 
-      } , () => {
-        this.randomimzer();
-      })
+      }  
+      )
       // this.randomimzer(response);
     })
 
@@ -74,16 +73,6 @@ class App extends Component {
 
     
 
-
-    // let random = (max) => {
-    //     let num = Math.floor(Math.random() * max);
-    //     return num;
-        
-    // }
-    
-    
-    // const randomIndex = random(this.state.outputDataLength);
-    // console.log(randomIndex);
 
 
 
@@ -126,10 +115,31 @@ class App extends Component {
 
   }
 
-  memeGenerator = () => { this.state.memetoAppend.map((template) => {
-        return <MemeBridge title={template.name} imgUrl={template.url} />
-      })
-    }
+  // memeGenerator = () => {
+
+  //   console.log('Randomizer activate!' , this.state.meme) 
+  //   const allMemes = [...this.state.meme];
+    
+  //   for (let i = allMemes.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [allMemes[i], allMemes[j]] = [allMemes[j], allMemes[i]];
+  //   }
+  //   console.log(allMemes);
+
+  //   const memeSlice = allMemes.slice(0,6)
+  //   console.log(memeSlice);
+
+  //   this.setState({
+  //     memetoAppend: memeSlice
+  //   )}
+  // }
+
+  handleClick = () => {
+
+let meme = this.state.meme
+
+    this.randomimzer(meme);
+  }
   
   render() {
      
@@ -139,7 +149,7 @@ class App extends Component {
         <h1> Dank Memes! </h1>
 
         
-              <button className="button" onClick={this.memeGenerator} >
+              <button className="button" onClick={this.handleClick} >
                 Let's Make Some Memes!
               </button>
 

@@ -20,7 +20,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 
  .heroImage {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
   height: 100vh;
+  line-height: 120px;
 }
 
 
@@ -41,7 +46,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 
 .App h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .gallery {
@@ -53,6 +58,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .imageBox {
   width: 50%;
   border: 1px solid red;
+  margin: 5% auto;
 }
 
 .App img {

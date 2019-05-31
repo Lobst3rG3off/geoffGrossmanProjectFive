@@ -126,7 +126,7 @@ let meme = this.state.memes
         
     return (
       <div className="App" >
-        <div className="heroImage">
+        <div className="heroImage wrapper">
           <h1> Trending Gifs </h1> 
           <h2>Any way you say it, they are awesome!</h2>
           <h3>Click the Button to see the most trending GIF's</h3>

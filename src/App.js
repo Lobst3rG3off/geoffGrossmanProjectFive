@@ -126,21 +126,23 @@ let meme = this.state.memes
         
     return (
       <div className="App" >
-      
-        <h1> Trending Gifs </h1> 
-        <h2>Any way you say it, they are awesome!</h2>
-        <h3>Click the Button to see the most trending GIF's</h3>
-
+        <div className="heroImage">
+          <h1> Trending Gifs </h1> 
+          <h2>Any way you say it, they are awesome!</h2>
+          <h3>Click the Button to see the most trending GIF's</h3>
+        
         
                <button className="button" onClick={this.handleClick} >
-                Let's Make Some Memes!
+                Lets See!
               </button>
-      
+      </div>
+
+            <div className="gallery wrapper">
               { this.state.memetoAppend.map((template) => {
-        return <MemeBridge title={template.title} imgUrl={template.images.original.url} />
-      })
-    }  
-          
+                  return <MemeBridge title={template.title} imgUrl={template.images.original.url} />
+                })
+              }  
+            </div>   
       </div>
     )
   }

@@ -11,7 +11,7 @@ import  './App.css';
 class App extends Component {
   constructor() {
     super();
-    //make an emptry array for state
+    //make an empty array for state
     this.state = {
       memes: [],
       isLoading: true,
@@ -27,38 +27,24 @@ class App extends Component {
 
     axios.get("http://api.giphy.com/v1/gifs/trending?api_key=XI2UVtaoFcAmwfGg9S1bcArrtsCLVxPc&offset=0")
      .then((response) => {
-             //store the date pulled from the ajax call into the empty array, and only parsing to the stuff We want
-            //  response = response.data.images;
-            //  const outputData = response;
              const outputDataLength = response.data.data.length;
              const memes = response.data.data;
-             console.log(response);
-             console.log(outputDataLength);
-             console.log(memes)
-
              this.setState({
              outputDataLength,
              memes,
-
-
-             })
-          
+             })      
            })
           }
 
   randomimzer = (response) => {
-    console.log('Randomizer activate!' , this.state.memes) 
     const allMemes = [...this.state.memes];
     
     for (let i = allMemes.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [allMemes[i], allMemes[j]] = [allMemes[j], allMemes[i]];
     }
-    console.log(allMemes);
 
     const memeSlice = allMemes.slice(0,6)
-    console.log(memeSlice);
-
     this.setState({
       memetoAppend: memeSlice
     })
@@ -66,20 +52,20 @@ class App extends Component {
 
   }
 
-
+// submit button
   handleClick = () => {
-console.log('clicked!')
 let meme = this.state.memes
 
     this.randomimzer(meme);
 
     
-  document.getElementById("gallery").scrollIntoView();
+  document.getElementById("gallery").scrollIntoView({
+    behavior: "smooth"
+  });
   }
-
+// back to top button
   handledClick = () => {
-    console.log('clicked!')
-    document.getElementById("heroImage").scrollIntoView();
+    document.getElementById("heroImage").scrollIntoView({behavior:"smooth"});
   }
 
 
@@ -91,7 +77,7 @@ let meme = this.state.memes
       <div className="App" >
         <div className="heroImage" id="heroImage">
           <h1> Trending Gifs </h1> 
-          <h2>Any way you say it, they are awesome!</h2>
+          <h2>Anyway you say it, they are awesome!</h2>
           <h2>See the most trending GIFs</h2>
         
         

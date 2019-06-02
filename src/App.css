@@ -17,15 +17,21 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
  .heroImage {
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
   height: 100vh;
   line-height: 120px;
+  background-image: linear-gradient(to bottom, #ff7a4d, #ff8749, #ff9445, #ffa043, #ffad42, #ffb844, #ffc247, #fecd4c, #fdd854, #fce35d, #fbed66, #f9f871);
 }
 
 
@@ -33,7 +39,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 
 .App {
-  text-align: center;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -43,22 +48,38 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .App h1 {
   font-size: 4rem;
+  font-family: 'Permanent Marker',
+  cursive;
 }
 
 .App h2 {
   font-size: 2rem;
+  font-family: 'Raleway',
+  sans-serif;
+}
+
+
+.App h3 {
+  font-size: 1.5rem;
+  font-family: 'Raleway',
+  sans-serif;
+  padding: 2%;
+  color: yellow;
+  text-transform: uppercase;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  width: 100%;
+   background-image: linear-gradient(to left top, #641fd5, #0f51e4, #006de5, #0082dc, #1293ce, #3e8ebf, #528ab0, #6085a1, #556d8c, #4b5676, #42405f, #382b47);
 }
 
 .imageBox {
-  width: 50%;
-  border: 1px solid red;
+  width: calc(50% - 2rem - 4px);
+  border: 5px dotted goldenrod;
   margin: 5% auto;
+  text-align: center;
+  border-radius: 5%;
+  padding: 1%;
 }
 
 .App img {
@@ -68,7 +89,75 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .button {
   width: 25%;
   line-height: 5%;
-  padding: 5%;
+  padding: 3% 0;
+  margin: 3% 0;
+  border-radius: 25%;
+  font-family: 'Raleway',
+  sans-serif;
+  font-size: 1rem;
 }
 
 
+
+
+@media (max-width: 888px) {
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .imageBox {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 725px) {
+.App h2 {
+
+  font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 637px) {
+.heroImage {
+  line-height: 100px;
+}
+
+  .App h2 {
+
+    font-size: 1.5rem;
+
+  }
+}
+
+@media (max-width: 637px) {
+
+.App h2 {
+
+  font-size: 1.25rem;
+
+}
+
+}
+
+@media (max-width: 464px) {
+
+  .App h2 {
+
+    font-size: 1rem;
+
+  }
+  .App h1 {
+
+    font-size: 3rem;
+
+  }
+
+  .button {
+
+    width: 50%;
+  }
+
+
+}

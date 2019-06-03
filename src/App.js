@@ -25,15 +25,30 @@ class App extends Component {
 
   componentDidMount() {
 
-    axios.get("http://api.giphy.com/v1/gifs/trending?api_key=XI2UVtaoFcAmwfGg9S1bcArrtsCLVxPc&offset=0")
-     .then((response) => {
-             const outputDataLength = response.data.data.length;
-             const memes = response.data.data;
-             this.setState({
-             outputDataLength,
-             memes,
-             })      
-           })
+    axios({
+      url: 'http://api.giphy.com/v1/gifs/trending?api_key=XI2UVtaoFcAmwfGg9S1bcArrtsCLVxPc&offset=0',
+      method: 'GET',
+      headers: {
+        'X-Content-Type-Options': 'nosniff'
+      }
+    }).then((response) => {
+      const outputDataLength = response.data.data.length;
+      const memes = response.data.data;
+      this.setState({
+        outputDataLength,
+        memes,
+      })
+    })
+
+    // axios.get("http://api.giphy.com/v1/gifs/trending?api_key=XI2UVtaoFcAmwfGg9S1bcArrtsCLVxPc&offset=0")
+    //  .then((response) => {
+    //          const outputDataLength = response.data.data.length;
+    //          const memes = response.data.data;
+    //          this.setState({
+    //          outputDataLength,
+    //          memes,
+    //          })      
+    //        })
           }
 
   randomimzer = (response) => {

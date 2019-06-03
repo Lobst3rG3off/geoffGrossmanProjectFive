@@ -306,7 +306,6 @@ input::-moz-focus-inner {
 
 
 @media (max-width: 888px) {
-
   .wrapper {
     flex-direction: column;
   }
@@ -314,12 +313,10 @@ input::-moz-focus-inner {
   .imageBox {
     width: 100%;
   }
-
 }
 
 @media (max-width: 725px) {
   .App h2 {
-
     font-size: 1.75rem;
   }
 }
@@ -328,39 +325,27 @@ input::-moz-focus-inner {
   .heroImage {
     line-height: 100px;
   }
-
   .App h2 {
-
     font-size: 1.5rem;
-
   }
 }
 
 @media (max-width: 637px) {
-
   .App h2 {
-
     font-size: 1.25rem;
-
   }
-
 }
 
 @media (max-width: 464px) {
-
   .App h2 {
-
     font-size: 1rem;
-
   }
 
   .App h1 {
-
     font-size: 2.5rem;
   }
 
   .button {
-
     width: 50%;
   }
 

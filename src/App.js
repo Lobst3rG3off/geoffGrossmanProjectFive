@@ -35,7 +35,7 @@ class App extends Component {
              })      
            })
   }
-
+// takes array and shuffles it and slices the top six
   randomimzer = (response) => {
     const allMemes = [...this.state.memes];
     

@@ -14,7 +14,6 @@ class App extends Component {
     //make an empty array for state
     this.state = {
       memes: [],
-      isLoading: true,
       outputData: 0,
       outputDataLength: 0,
       memetoAppend: [],
